@@ -1,0 +1,31 @@
+
+
+.container{
+    text-align: center;
+    position:relative;
+}
+
+#clickme{
+    padding:12px 20px;
+    margin:4px auto;
+    background-color:yellowgreen;
+    border-radius:10px;
+    text-align: center;
+}
+
+table{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-40%,-50%);
+    background-color:forestgreen;
+    color:white;
+}
+table,th,td{
+    border:solid 1px #ddd;
+    padding:2px 3px;
+    text-align:center;
+}
+th{
+    color:black;
+}

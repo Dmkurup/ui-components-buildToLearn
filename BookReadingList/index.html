@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bookorama</title>
+</head>
+<body>
+    <div id="wrapper">
+    <header id="page-banner">
+        <h1 class="title">Bookorama</h1>
+        <p>Books for Introverts</p>
+        <form id="search-books">
+            <input type="text" placeholder="Search books..."/>
+        </form>
+    </header>
+    <div id="book-list">
+        <h2 class="title">Books To Read</h2>
+        <ul>
+            <li>
+                <span class="name">Autobiography Of A Yogi</span>
+                <span class="delete">Delete</span>
+            </li>
+            <li>
+                <span class="name">Apprentice To A Himalayan Master</span>
+                <span class="delete">Delete</span>
+            </li>
+        </ul>
+    </div>
+    <form id="add-book">
+        <input type="checkbox" id="hide"/>
+        <label for="hide">Hide all books</label>
+
+        <input type="text" placeholder="Add a book..."/>
+        <button>Add</button>
+    </form>
+    <div id="tabbed-content">
+        <ul class="tabs">
+            <li data-target="#about" class="active">About</li>
+            <li data-target="#contact">Contact</li>
+        </ul>
+        <div class="panel active" id="about">
+            <p>Content for about tab</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi sit quia iste ipsa, nam neque? Numquam cumque 
+                eum ut ipsam expedita natus quas consequuntur! Tempore tempora iure dolorum adipisci?</p>
+        </div>
+        <div class="panel" id="contact">
+            <p>Content for contact tab</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi sit quia iste ipsa, nam neque? Numquam cumque 
+                eum ut ipsam expedita natus quas consequuntur! Tempore tempora iure dolorum adipisci?</p>
+        </div>
+
+    </div>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>

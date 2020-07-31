@@ -1,0 +1,43 @@
+html,body{
+    text-align:center;
+    /* background-color: lightblue; */
+    height:100%;
+}
+
+#search{
+    margin:20px;
+    padding:12px 20px;
+    border-radius:10px;
+    width:60%;
+}
+.container{
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    text-align:center;
+    /* background-color: lawngreen; */
+    margin:0 auto;
+    padding:0;
+    width:100%;
+    min-height:100%;
+    position:relative;
+    /* overflow:hidden; */
+}
+#myTable{
+    /* background-color: lemonchiffon; */
+    border-collapse:collapse;
+    width:100%;
+    font-size:18px;
+}
+
+#myTable th,#myTable td{
+text-align:left;
+padding:12px;
+}
+#myTable tr{
+    border-bottom:1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover{
+    background-color: lightblue;
+}

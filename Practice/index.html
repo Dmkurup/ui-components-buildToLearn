@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>API Pagination</h1>
+    <button id="apiBtn">Click me</button>
+    <div id="results"></div>
+    <script>
+     const resultsDiv= document.getElementById("results")
+     const btn = document.getElementById("apiBtn");
+
+     btn.addEventListener("click",getResponse);
+
+     async function getResponse(code="AR"){
+         let pageNum=1;
+         const url ="https://jsonmock.hackerrank.com/api/countries?page=";
+        //  const response = await fetch(url+`${pageNum}`);
+        //  const result = await response.json();
+         let totalPages= 25;
+           let countryRec=[] ;
+         while(countryRec.length==0 && pageNum<totalPages){ 
+            console.log("Pagenum"+pageNum);   
+            const response = await fetch(url+`${pageNum}`);
+            const result = await response.json();
+            countryRec =result.data.filter(rec=> rec.alpha2Code=="AR");
+            pageNum++;
+         console.log(result);
+         }
+         console.log(countryRec[0].name);
+         resultsDiv.textContent=countryRec[0].name;
+     }
+
+
+        </script>
+</body>
+</html>
