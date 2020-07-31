@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing IFrame</title>
+</head>
+<body>
+    <h1>Accessing an IFrame</h1>
+ 
+    <button id="myBtn" onclick="changeIframe()">Change Iframe</button>
+    <hr>
+    <iframe id="myIframe" src="./content.html" frameborder=1></iframe>
+    <script>
+        const myIframe= document.getElementById("myIframe");
+        
+
+        function changeIframe(){
+            const iframeDoc=myIframe.contentDocument;
+            iframeDoc.body.style.backgroundColor="red";
+            iframeDoc.querySelector("h1").innerHTML="This has been changed!!";
+        }
+
+    </script>
+    
+</body>
+</html>
