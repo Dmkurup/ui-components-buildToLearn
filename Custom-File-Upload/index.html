@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom File Upload Button</title>
+    <style>
+        #custom-button{
+            background-color:hsl(120, 72%, 35%);
+            border-radius:4px;
+            padding:10px;
+            color:white;
+            cursor:pointer;
+        }
+        #custom-button:hover{
+            background-color: lightgreen;
+        }
+        #custom-text{
+            font-family:sans-serif;
+            margin-left:10px;
+            color:#aaa;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="real-file" hidden="hidden">
+    <button type="button" id="custom-button">Choose A File</button>
+    <span id="custom-text">No file chosen yet</span>
+    <script>
+        const realBtn=document.getElementById("real-file");
+        const customBtn=document.getElementById("custom-button");
+        const customTxt=document.getElementById("custom-text");
+
+        customBtn.addEventListener('click',()=>{
+            realBtn.click();
+        })
+        realBtn.addEventListener('change',()=>{
+            if(realBtn.value){
+                customTxt.innerHTML=realBtn.value;
+            }else{
+                customTxt.innerHTML="No file Chosen,yet.";
+            }
+            
+        })
+    </script>
+</body>
+</html>
