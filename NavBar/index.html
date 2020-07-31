@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <title>NavBar</title>
+</head>
+<body>
+    <h1>Navigation Bar </h1>
+    <hr>
+    <button onclick="toggleNav()" style="float:right; height:40px">Open/Close Nav</button>
+    <div class="navbar navbar-open">
+        <a href="#" class="navbar-link">
+            <span class="material-icons">home</span>Home
+        </a>
+        <a href="#" class="navbar-link">
+            <span class="material-icons">photo_library</span>Photos
+        </a>
+        <a href="#" class="navbar-link">
+            <span class="material-icons">question_answer</span>Forum
+        </a>
+        <a href="#" class="navbar-link">
+            <span class="material-icons">exit_to_app</span>Logout
+        </a>
+    </div>
+    <script>
+       function toggleNav(){
+           const navbar=document.querySelector(".navbar");
+           navbar.classList.toggle("navbar-open");
+       }
+    </script>
+</body>
+</html>

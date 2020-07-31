@@ -1,0 +1,40 @@
+h1{
+    color:#009879;
+    font-family:Tahoma;
+}
+.navbar{
+    position:fixed;
+    top:0;
+    left:-200px;
+    width:200px;
+    height:100%;
+    background:#009879;
+    border:2px solid #008C71;
+    box-shadow:0 0 10px 5px rgba(0,0,0,0.25);
+    opacity:0;
+    transition:left 0.25s ease-in-out,opacity 0.25s ease-in-out;
+}
+
+.navbar-open{
+    left:0;
+    opacity:1;
+}
+
+.navbar-link{
+    display:flex;
+    align-items:center;
+    background:#008C71;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:0.85rem;
+    border-bottom:1px solid #009879;
+}
+.navbar-link .material-icons{
+    margin-right:12px;
+}
+
+.navbar-link:active{
+        background:#007d65;
+    }
