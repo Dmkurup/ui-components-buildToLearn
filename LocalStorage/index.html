@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Local Storage</title>
+</head>
+<body>
+    <fieldset>
+    <legend>Input Data</legend>
+    <input  id="inpKey" type="text" placeholder="Enter key.."/>
+    <input  id="inpVal" type="text" placeholder="Enter value.."/>
+    <button  id="btnInsert" type="button">Insert</button>
+    </fieldset>
+ <fieldset>
+     <legend>Local Storage</legend>
+     <div id="output"></div>
+ </fieldset>
+    <script>
+        const inpkey = document.getElementById("inpKey");
+        const inpVal = document.getElementById("inpVal");
+        const btnInsert = document.getElementById("btnInsert");
+        const output = document.getElementById("output");
+       
+       btnInsert.addEventListener("click",function(){
+           let key= inpkey.value;
+           let value =inpVal.value;
+           if(key && value){
+            localStorage.setItem(key,value);
+            location.reload();
+           }
+       });
+       
+       for(let i=0;i<localStorage.length;i++){
+               let key=localStorage.key(i);
+               let value=localStorage.getItem(key);
+               output.innerHTML+=`${key}:${value}<br/>`;
+           }
+
+
+
+    </script>
+</body>
+</html>
