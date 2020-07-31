@@ -21,7 +21,7 @@ const createTable =(movies) =>{
     }
   }
   let table = document.createElement("table");
-  table.setAttribute("id","myTable");
+  table.setAttribute("class","content-table");
   let tr = table.insertRow(-1);
   tr.setAttribute("class","header");
 
